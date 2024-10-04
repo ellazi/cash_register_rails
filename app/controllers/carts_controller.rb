@@ -17,7 +17,7 @@ class CartsController < ApplicationController
     product = Product.find(params[:id])
     if product
       @cart << product
-      redirect_to cart_path, notice: 'Product added to cart'
+      redirect_to products_path, notice: 'Product added to cart'
     else
       redirect_to products_path, alert: 'Product not found'
     end

@@ -1,4 +1,8 @@
 <h1>checkout</h1>
-<%= @basket %>
-<%= @total_price %>
-<%= link_to 'Clear Cart', clear_cart_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+<div class="product-list">
+  <div class="flex-grid-checkout">
+    <p><%= @basket %></p>
+    <p><%= @total_price %> €</p>
+  </div>
+  <%= button_to 'Clear Cart', clear_cart_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+</div>
