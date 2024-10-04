@@ -1,0 +1,4 @@
+<h1>checkout</h1>
+<%= @basket %>
+<%= @total_price %>
+<%= link_to 'Clear Cart', clear_cart_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>

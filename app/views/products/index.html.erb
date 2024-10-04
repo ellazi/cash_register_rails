@@ -1,0 +1,7 @@
+<h1>Welcome to our shop!</h1>
+<% @products.each do |product| %>
+  <p><%= product.product_code %></p>
+  <p><%= product.name %></p>
+  <p><%= product.price %></p>
+  <%= button_to 'Add to Cart', add_to_cart_path(product.id), method: :post %>
+<% end %>
